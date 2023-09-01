@@ -24,11 +24,6 @@
     --switch-bg-url: url(./assets/sun.svg);
 }
 
-body * {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-}
-
 body {
     /*background-image: url(/assets/mobile-dark.jpg);
     background-repeat: no-repeat;
@@ -36,6 +31,11 @@ body {
     background-size: cover;*/
     background: var(--bg-url) no-repeat top center/cover;
     height: 100vh;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
 }
 
 #container {
@@ -58,7 +58,7 @@ body {
     width: 112px;
 }
 
-#profile p{
+#profile p {
     font-weight: 500;
     line-height: 24px;
     margin-top: 8px;
@@ -70,24 +70,24 @@ body {
 #switch {
     position: relative;
     width: 64px;
+
     margin: 4px auto;
 }
 
 #switch button {
     width: 32px;
     height: 32px;
-    background: white var(--switch-bg-url) no-repeat center;;
+    background: white var(--switch-bg-url) no-repeat center;
     border: 0;
     border-radius: 50%;
+    
     position: absolute;
+    top: 50%;
     left: 0;
     z-index: 1;
-    top: 50%;
     transform: translateY(-50%);
+
     animation: slide-back 0.4s;
-
-
-
 }
 
 .light #switch button {
@@ -113,9 +113,11 @@ body {
 /*LINKS*/
 ul {
     list-style: none;
+    
     display: flex;
     flex-direction: column;
     gap: 16px;
+    
     padding: 24px 0;
 }
 
@@ -123,14 +125,19 @@ ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     padding: 16px 24px;
+    
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 50px;
+    
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    
     text-decoration: none;
     font-weight: 500;
+    
     transition: background 0.2s;
 }
 
@@ -143,7 +150,9 @@ ul li a:hover {
 #social-links {
     display: flex;
     justify-content: center;
+    
     padding: 24px 0;
+    
     font-size: 24px;
 }
 
@@ -151,14 +160,15 @@ ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    transform: background 0.2s;
+    padding: 16px;
+
+    transition: background 0.2s;
     border-radius: 50%;
 }
 
 #social-links a:hover {
     background: var(--highlight-color);
-    border-radius: 50%;
+    
 }
 
 /*FOOTER*/ 
@@ -183,8 +193,10 @@ footer>i {
     }
 }
 
+/*animation*/
+
 @keyframes slide-in {
-    from{
+    from {
         left: 0;
     }
     to {
